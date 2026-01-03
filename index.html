@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Sushi | Authentic Japanese Cuisine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Delicious<span>Sushi</span></a>
+        <div class="menuToggle" onclick="toggleMenu()"></div>
+        <ul class="navigation">
+            <li><a href="#banner" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
+            <li><a href="#expert" onclick="toggleMenu()">Chefs</a></li>
+            <li><a href="#testimonials" onclick="toggleMenu()">Reviews</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Reservation</a></li>
+        </ul>
+    </header>
+
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>Taste the <span>Tradition</span></h2>
+            <p>
+                Experience the art of authentic sushi made with the freshest catch of the day. 
+                Crafted by expert chefs to deliver rich flavors and perfect balance in every bite.
+            </p>
+            <a href="#menu" class="btn">View Our Menu</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText"><span>A</span>bout Us</h2>
+                <p>
+                    At Delicious Sushi, we believe great food begins with the finest ingredients and a deep respect for tradition. 
+                    Our chefs carefully select fresh seafood and premium vinegar rice to craft dishes that reflect the true art of Japanese cuisine.
+                    <br><br>
+                    Whether you are dining with family, friends, or celebrating a special moment, we aim to deliver an experience that is flavorful, memorable, and authentic.
+                </p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <div class="title">
+            <h2 class="titleText">Our <span>M</span>enu</h2>
+            <p>Hand-rolled perfection. Fresh ingredients. Unforgettable taste.</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://images.unsplash.com/photo-1633478062482-790e3b5dd810?auto=format&fit=crop&w=600&q=80" alt="Salmon Nigiri">
+                </div>
+                <div class="text">
+                    <h3>Salmon Nigiri</h3>
+                    <p class="price">$8.00 / 2pcs</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Spicy_Tuna_Roll.jpg/640px-Spicy_Tuna_Roll.jpg" alt="Spicy Tuna Roll">
+                </div>
+                <div class="text">
+                    <h3>Spicy Tuna Roll</h3>
+                    <p class="price">$12.00</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://images.unsplash.com/photo-1534256958597-7fe685cbd745?auto=format&fit=crop&w=600&q=80" alt="Sashimi Platter">
+                </div>
+                <div class="text">
+                    <h3>Sashimi Platter</h3>
+                    <p class="price">$24.00</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://images.unsplash.com/photo-1615887023516-9b6bcd50926d?auto=format&fit=crop&w=600&q=80" alt="Dragon Roll">
+                </div>
+                <div class="text">
+                    <h3>Dragon Roll</h3>
+                    <p class="price">$15.00</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?auto=format&fit=crop&w=600&q=80" alt="Miso Ramen">
+                </div>
+                <div class="text">
+                    <h3>Tonkotsu Ramen</h3>
+                    <p class="price">$16.00</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://images.unsplash.com/photo-1505575967455-40e256f73376?auto=format&fit=crop&w=600&q=80" alt="Matcha Ice Cream">
+                </div>
+                <div class="text">
+                    <h3>Matcha Dessert</h3>
+                    <p class="price">$6.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <a href="#" class="btn">View Full Menu</a>
+        </div>
+    </section>
+
+    <section class="expert" id="expert">
+        <div class="title">
+            <h2 class="titleText">Our <span>M</span>aster Chefs</h2>
+            <p>Decades of experience in every slice.</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=600&q=80" alt="Head Chef">
+                </div>
+                <div class="text">
+                    <h3>Hiroshi Tanaka</h3>
+                    <p>Head Chef</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80" alt="Sous Chef">
+                </div>
+                <div class="text">
+                    <h3>Kenji Sato</h3>
+                    <p>Sous Chef</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&w=600&q=80" alt="Pastry Specialist">
+                </div>
+                <div class="text">
+                    <h3>Yumi Suzuki</h3>
+                    <p>Pastry Specialist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="title white">
+            <h2 class="titleText">Guest <span>R</span>eviews</h2>
+            <p>See what our happy customers are saying.</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="John Doe">
+                </div>
+                <div class="text">
+                    <p>
+                        "The sushi was incredibly fresh. The Omakase experience was the best I've had in the city. Highly recommended!"
+                    </p>
+                    <h3>John Doe</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80" alt="Alice Smith">
+                </div>
+                <div class="text">
+                    <p>
+                        "Absolutely loved the Dragon Roll. Great ambience, friendly staff, and amazing food."
+                    </p>
+                    <h3>Alice Smith</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Mike K">
+                </div>
+                <div class="text">
+                    <p>
+                        "A hidden gem. You can truly taste the freshness in every bite. I will be coming back next week."
+                    </p>
+                    <h3>Mike K.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="title">
+            <h2 class="titleText"><span>R</span>eservations</h2>
+            <p>Book a table or contact us for private events.</p>
+        </div>
+        <form class="contactForm" onsubmit="event.preventDefault(); alert('Thank you! Your reservation request has been sent.');">
+            <h3>Book Your Table</h3>
+            <div class="inputBox">
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="inputBox">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="inputBox">
+                <input type="text" placeholder="Phone Number" required>
+            </div>
+            <div class="inputBox">
+                <textarea placeholder="Message / Special Requests (e.g. Allergies)" required></textarea>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Send Request">
+            </div>
+        </form>
+    </section>
+
+    <div class="copyrightText">
+        <p>Copyright © 2025 <a href="#">Delicious Sushi</a>. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
